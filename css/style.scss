@@ -120,7 +120,7 @@ body {
       .close {
         display: none;
         background-color: transparent;
-        color: #ff0031;
+        color: #c5912d;
       }
     }
     .nav-link {
@@ -130,6 +130,7 @@ body {
       height: 0px;
       transition: var(--tran);
       overflow: hidden;
+      color: var(--black);
       ul {
         display: grid;
 
