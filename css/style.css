@@ -14,6 +14,19 @@
   --mont: "Montserrat", sans-serif;
 }
 
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+  color: lightgray;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  color: white !important;
+  background-color: white;
+}
+
 .fp-warning,
 .fp-watermark a {
   display: none !important;
@@ -79,10 +92,17 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1000000;
+  min-height: 4rem;
+  display: grid;
+  place-items: center;
 }
 #nav .container {
   display: grid;
   grid-template-columns: auto 1fr;
+}
+#nav .container .nav-logo {
+  display: grid;
+  place-items: center;
 }
 #nav .container .nav-logo a {
   display: grid;
@@ -130,7 +150,7 @@ body {
   letter-spacing: 0.2rem;
   gap: 1rem;
 }
-#nav .container .nav-link ul li {
+#nav .container .nav-link ul li a {
   color: var(--black);
 }
 #nav .container .display-nav {
@@ -192,7 +212,9 @@ body {
 
 .section-3 {
   background: black;
-  padding-bottom: 1rem;
+  min-height: 20vh;
+  display: grid;
+  place-items: center;
 }
 .section-3 .container {
   display: grid;
@@ -200,6 +222,7 @@ body {
 .section-3 .container footer .row {
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 .section-3 .container footer .row .footer-txt h2 {
   text-transform: uppercase;
@@ -210,9 +233,45 @@ body {
 .section-3 .container footer .row .footer-nav ul {
   display: flex;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 .section-3 .container footer .row .footer-nav ul li {
   text-transform: capitalize;
   color: lightgray;
+}
+
+@media screen and (min-width: 700px) {
+  #fullpage .section-1 .container .sect1txt h2 {
+    max-width: 35rem;
+  }
+  #fullpage .section-2 .container {
+    display: grid;
+    place-items: center;
+  }
+  #fullpage .section-2 .container .headtxt {
+    max-width: 34rem;
+    text-align: center;
+  }
+  #fullpage .section-2 .container .headtxt h2 {
+    font-size: 2.5em;
+  }
+  #fullpage .section-2 .container .headtxt p {
+    font-size: 1em;
+  }
+  #fullpage .section-2 .container .headtxt button {
+    margin-left: 1.5rem;
+    transition: var(--tran);
+  }
+  #fullpage .section-2 .container .headtxt button:hover {
+    background-color: black;
+    color: var(--clr-primary);
+  }
+}
+.section-3 {
+  min-height: 50vh;
+}
+.section-3 .container {
+  display: grid;
+  place-items: center;
 }/*# sourceMappingURL=style.css.map */

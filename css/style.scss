@@ -14,6 +14,19 @@
   --mont: "Montserrat", sans-serif;
 }
 
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+  color: lightgray;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  color: white !important;
+  background-color: white;
+}
+
 .fp-warning,
 .fp-watermark a {
   display: none !important;
@@ -81,6 +94,9 @@ body {
   position: fixed;
   width: 100%;
   z-index: 1000000;
+  min-height: 4rem;
+  display: grid;
+  place-items: center;
 
   .container {
     display: grid;
@@ -88,6 +104,8 @@ body {
 
     .nav-logo {
       // background-color: red;
+      display: grid;
+      place-items: center;
       a {
         display: grid;
         grid-template-columns: auto auto;
@@ -140,7 +158,9 @@ body {
         gap: 1rem;
 
         li {
-          color: var(--black);
+          a {
+            color: var(--black);
+          }
         }
       }
     }
@@ -227,7 +247,9 @@ body {
 
 .section-3 {
   background: black;
-  padding-bottom: 1rem;
+  min-height: 20vh;
+  display: grid;
+  place-items: center;
   .container {
     // background-color: yellow;
     display: grid;
@@ -236,6 +258,7 @@ body {
       .row {
         display: grid;
         place-items: center;
+        overflow: hidden;
         .footer-txt {
           // background-color: green;
 
@@ -251,7 +274,7 @@ body {
           ul {
             display: flex;
             grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+            column-gap: 2rem;
 
             li {
               text-transform: capitalize;
@@ -261,5 +284,47 @@ body {
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #fullpage .section-1 .container .sect1txt h2 {
+    max-width: 35rem;
+  }
+
+  #fullpage {
+    .section-2 {
+      .container {
+        display: grid;
+        place-items: center;
+
+        .headtxt {
+          max-width: 34rem;
+          text-align: center;
+          h2 {
+            font-size: 2.5em;
+          }
+          p {
+            font-size: 1em;
+          }
+          button{
+            margin-left: 1.5rem;
+            transition: var(--tran);
+          }
+          button:hover{
+            background-color: black;
+            color: var(--clr-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-3 {
+  min-height: 50vh;
+  .container {
+    display: grid;
+    place-items: center;
   }
 }
