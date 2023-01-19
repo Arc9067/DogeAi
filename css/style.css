@@ -14,7 +14,8 @@
   --mont: "Montserrat", sans-serif;
 }
 
-.fp-warning, .fp-watermark a {
+.fp-warning,
+.fp-watermark a {
   display: none !important;
 }
 
@@ -121,7 +122,6 @@ body {
   height: 0px;
   transition: var(--tran);
   overflow: hidden;
-  color: var(--black);
 }
 #nav .container .nav-link ul {
   display: grid;
@@ -129,6 +129,9 @@ body {
   text-transform: capitalize;
   letter-spacing: 0.2rem;
   gap: 1rem;
+}
+#nav .container .nav-link ul li {
+  color: var(--black);
 }
 #nav .container .display-nav {
   height: 115.5333251953px;
